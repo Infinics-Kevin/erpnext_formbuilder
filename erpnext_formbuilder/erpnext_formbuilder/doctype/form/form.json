@@ -1,0 +1,65 @@
+{
+ "creation": "2020-03-07 18:40:52.433231",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "form_name",
+  "form_html",
+  "fields",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "form_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Form Name",
+   "options": "Form Builder",
+   "reqd": 1
+  },
+  {
+   "fieldname": "form_html",
+   "fieldtype": "HTML",
+   "label": "Form HTML",
+   "options": "<div id=\"fb-test-render\">Hey</div>"
+  },
+  {
+   "fieldname": "fields",
+   "fieldtype": "Small Text",
+   "label": "Fields"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Form",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-03-08 00:08:47.448717",
+ "modified_by": "Administrator",
+ "module": "Erpnext Formbuilder",
+ "name": "Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

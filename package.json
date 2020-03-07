@@ -1,0 +1,11 @@
+{
+  "name": "erpnext_formbuilder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/MohammadAhmad1990/erpnext_formbuilder.git",
+  "author": "ahmad@havenir.com",
+  "license": "MIT",
+  "dependencies": {
+    "formBuilder": "^3.4.2"
+  }
+}

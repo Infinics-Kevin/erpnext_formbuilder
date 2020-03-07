@@ -1,0 +1,46 @@
+{
+ "autoname": "field:form_name",
+ "creation": "2020-03-06 16:24:35.565480",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "form_name",
+  "fields"
+ ],
+ "fields": [
+  {
+   "fieldname": "fields",
+   "fieldtype": "Table",
+   "label": "Fields",
+   "options": "Form Builder Fields"
+  },
+  {
+   "fieldname": "form_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "unique": 1
+  }
+ ],
+ "modified": "2020-03-07 10:29:04.671433",
+ "modified_by": "Administrator",
+ "module": "Erpnext Formbuilder",
+ "name": "Form Builder",
+ "owner": "ahmad@havenir.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

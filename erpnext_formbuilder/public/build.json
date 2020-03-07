@@ -1,0 +1,10 @@
+{
+  "js/form-builder.js": [
+    "public/js/jquery-ui.min.js",
+    "public/js/form-builder.min.js",
+    "public/js/form-render.min.js"
+  ],
+  "css/form-builder.css": [
+    "public/css/form-builder.css"
+  ]
+}
