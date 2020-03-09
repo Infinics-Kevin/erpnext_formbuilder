@@ -22,12 +22,14 @@
    "fieldname": "form_html",
    "fieldtype": "HTML",
    "label": "Form HTML",
-   "options": "<div id=\"fb-test-render\">Hey</div>"
+   "options": "<div id=\"fb-test-render\"></div>"
   },
   {
    "fieldname": "fields",
    "fieldtype": "Small Text",
-   "label": "Fields"
+   "hidden": 1,
+   "label": "Fields",
+   "read_only": 1
   },
   {
    "fieldname": "amended_from",
@@ -40,7 +42,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-03-08 00:08:47.448717",
+ "modified": "2020-03-09 11:34:01.453947",
  "modified_by": "Administrator",
  "module": "Erpnext Formbuilder",
  "name": "Form",

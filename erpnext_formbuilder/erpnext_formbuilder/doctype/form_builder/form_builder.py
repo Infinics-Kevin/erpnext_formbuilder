@@ -21,23 +21,30 @@ def create_form_builder(doc_name, fields):
     if form_list:
         frappe.throw('{} already exists'.format(doc_name))
 
-    new_form = frappe.get_doc({
-        'doctype': 'Form Builder',
-        'form_name': doc_name,
-    })
-    y = json.loads(fields)
-    print('Type after json.loads:', type(y))
-    for field in y:
-        print('field name:',field['name'])
-        new_form.append('fields', {
-            'field_name': field['name'],
-            'field_type': field['type'],
-            'value': json.dumps(field)
+    else:
+        new_form = frappe.get_doc({
+            'doctype': 'Form Builder',
+            'form_name': doc_name,
         })
+        y = json.loads(fields)
+        print('Type after json.loads:', type(y))
+        for field in y:
+            if field['type'] in ['header','paragraph']:
+                new_form.append('fields', {
+                'field_name': field['label'],
+                'field_type': field['type'],
+                'value': json.dumps(field)
+            })
+            else:
+                new_form.append('fields', {
+                    'field_name': field['name'],
+                    'field_type': field['type'],
+                    'value': json.dumps(field)
+                })
 
-    new_form.save()
+        new_form.save()
 
-    return '{} form created from py method'.format(doc_name)
+        return '{} form created from py method'.format(doc_name)
 
 
 @frappe.whitelist()
@@ -57,11 +64,17 @@ def update_form_builder(doc_name, fields):
     y = json.loads(fields)
     print('Type after json.loads:', type(y))
     for field in y:
-        print('field_name:',field['name'])
-        form.append('fields', {
-            'field_name': field['name'],
-            'field_type': field['type'],
-            'value': json.dumps(field)
-        })
+            if field['type'] in ['header','paragraph']:
+                form.append('fields', {
+                'field_name': field['label'],
+                'field_type': field['type'],
+                'value': json.dumps(field)
+            })
+            else:
+                form.append('fields', {
+                    'field_name': field['name'],
+                    'field_type': field['type'],
+                    'value': json.dumps(field)
+                })
     form.save()
     return 'Updated'

@@ -7,8 +7,8 @@ def get_data():
 		{
 			"module_name": "Erpnext Formbuilder",
 			"color": "grey",
-			"icon": "octicon octicon-file-directory",
+			"icon": "octicon octicon-clippy",
 			"type": "module",
-			"label": _("Erpnext Formbuilder")
+			"label": _("Form Builder")
 		}
 	]
